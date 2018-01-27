@@ -1,0 +1,12 @@
+{% extends './layout.html' %}
+
+{% block content %}
+<h2 style='margin-top: 20px'>Latest Tweets:</h2>
+<div>
+<ul class="list-group">
+
+  {% for tweet in tweets %}
+  <li class="list-group-item" style="margin-bottom: 15px"><a href='/tweets/{{tweet.id}}'>{{tweet.text}}</a></li>
+  {% endfor %}
+</div>  
+{%endblock%} 

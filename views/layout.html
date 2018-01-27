@@ -1,0 +1,29 @@
+<html>
+  <head>
+      <link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css'/>
+      <title>{{title}}</title>
+  </head>
+  <body>
+      <div class='container'>
+          <h1> {{title}}</h1>
+          <ul class='nav nav-pills' style='margin: 10px 0'>
+            <li class='nav-item'>
+              <a href='/' class='nav-link{% if path==='/'%} active{%endif%}'>Home</a>
+            </li>
+            <li class='nav-item'>
+                <a href='/tweets' class='nav-link{% if path==='/tweets'%} active{%endif%}'>Tweets</a>
+            </li>
+          </ul>
+          {%block content%}
+          {%endblock%}
+          <ul class='nav nav-pills' style='margin: 10px 0'>
+            <li class='nav-item'>
+              <a href='/' class='nav-link{% if path==='/'%} active{%endif%}'>Home</a>
+            </li>
+            <li class='nav-item'>
+                <a href='/tweets' class='nav-link{% if path==='/tweets'%} active{%endif%}'>Tweets</a>
+            </li>
+          </ul>
+        </div>
+  </body>
+</html>
